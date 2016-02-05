@@ -7,8 +7,8 @@ collection = [
         "author":"Yoda",
         "film":"SW The Empire Strikes Back",
         "img":"http://r23.imgfast.net/users/2814/65/96/99/album/pr/yoda12_800x600.jpg"},
-    {"quote":"To the well organized mind, death is but the next great adventure.",
-        "author":"A. Dumbledore",
+    {"quote":"To the well organized mind, death is but the next great adventure",
+        "author":"Dumbledore",
         "film":"HP and the Sorcerer's Stone",
         "img":"http://cdn.hitfix.com/photos/5995544/Dumbledore_article_story_large.jpg"},
     {"quote":"Why so serious? Let's put a smile on that face!",
@@ -37,24 +37,19 @@ var newQuote = function(){
   $('#film').html(collection[random].film);
   $('.img').html("<img src='"+collection[random].img+"'/>");
 
-  //TWITTER INTERFACE
-  //$('.twitter-share-button').removeAttr('href');
-  //$('.twitter-share-button').attr('href', transform($('#quote').html() + " - " + $('#author').html() + " in " + $('#film').html()));
+  /*TWITTER INTERFACE BUTTON*/
+  var url = 'https://twitter.com/intent/tweet?text=' + currentQuote + " %23AwesomeMoviesAwesomeQuotes";
 
+  url = url.replace(/[\s]/g,'%20');
+  $('#btnTwitter').attr('href',url);
 };
 
-var transform = function(str) {
-  var str = "https://twitter.com/intent/tweet?button_hashtag=AwesomeMoviesAwesomeQuotes&text=" + str;
-  return str.replace(/ /g, "%20");
-  };
-
 //when we want new quote
-$(".btn").click(function(){
+$("#newQuote").click(function(){
   newQuote();
 });
 
 //TWITTER INTERFACE
-/*
 window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};
@@ -71,4 +66,4 @@ window.twttr = (function(d, s, id) {
   };
 
   return t;
-}(document, "script", "twitter-wjs"));*/
+}(document, "script", "twitter-wjs"));
