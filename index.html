@@ -1,72 +1,49 @@
 <!DOCTYPE html>
-<html >
+
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>A Pen by  Luís Melo</title>
-    
-    
-    
+    <title>My Movie Quotes </title>
+    <link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
     <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
-
-        <link rel="stylesheet" href="css/style.css">
-
-    
-    
-    
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
+    <header>
+      <h1>My Movie Quotes</h1>
+      <small>Welcome to my Movie Quotes page. As a film enthusiast, I decided to join some of the quotes that marked me during my spectator life. Made following the FreeCodeCamp program.These are my favourite ones.<br><strong>Share and have fun!<strong></small>
+    </header>
+    <div class='container'>
+      <div class="img col-xs-4"></div>
+      <div class="info">
+        <blockquote class='blockquote-reverse'>
+          <p id="quote"></p>
+          <footer>
+            <strong id="author"></strong> in
+            <em id="film"></em>
+          </footer>
+        </blockquote>
+      </div>
 
-    <html>
 
-<head>
-  <link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
-</head>
+     <div class="botoes">
+       <!-- TWITTER INTERFACE -->
+    <!--    <a class="twitter-share-button"
+          href="https://twitter.com/share"
+          data-size="large"
+          data-related="twitterapi,twitter"
+          data-hashtags="AwesomeMoviesAwesomeQuotes"
+          data-text="custom share text">
+        Tweet
+        </a>-->
 
-<body>
-  <header>
-    <h1>My Movie Quotes</h1>
-    <small>Welcome to my Movie Quotes page. As a film enthusiast, I decided to join some of the quotes that marked me during my spectator life. Made following the FreeCodeCamp program.These are my favourite ones.<br><strong>Share and have fun!<strong></small>
-  </header>
-  <div class='container'>
-    <!--<div class="img col-xs-4"></div>-->
-    <div class="quote"></div>
-    <div class="botoes">
-      <a href="https://twitter.com/share" id="tw" class="twc twitter-share-button" data-text="" data-size="large" data-hashtags="AwesomeMovieAwesomeQuote"></a>
-
-      <button class="btn" type="button">New Quote</button>
+        <button class="btn" type="button">New Quote</button>
+      </div>
     </div>
-  </div>
 
-
-  <script>
-    window.twttr = (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0],
-        t = window.twttr || {};
-      if (d.getElementById(id)) return t;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://platform.twitter.com/widgets.js";
-      fjs.parentNode.insertBefore(js, fjs);
-     
-      t._e = [];
-      t.ready = function(f) {
-        t._e.push(f);
-      };
-     
-      return t;
-    }(document, "script", "twitter-wjs"));
-  </script>
-</body>
-
-</html>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
-
-        <script src="js/index.js"></script>
-
-    
-    
-    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+    <script src="js/main.js"></script>
   </body>
+
 </html>
